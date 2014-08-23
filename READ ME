@@ -1,0 +1,23 @@
+1. Install Node.js and npm
+2. git clone this repository in a directory
+3. Copy the 'sugar' directory into :
+	1) Linux / mac users : in ~/.cordova/lib
+        2) Windows - C:\<User name>\.cordova 
+4. cd to cordova-cli/bin folder and issue the following commands : 
+
+	1) To create a new project : ./cordova create <name of the project directory> <project id> <project name> 
+           For windows users the command changes to cordova create <name of the project directory> <project id> <project name>
+        2) To add the sugar platform , cd to the directory name you gagve above ( inside cordova-cli-sugar/bin only ) and issue the command : .././cordova platform add sugar
+           For windows users ..\cordova platform add sugar
+        3) Make to www folder in the project directory to make your app
+        	(i) If you know much about the sugar web and would like to make the pages using toolbars and much sugar specific features then to make the .xo by using the command - .././cordova build sugar --noiframe
+                    
+                (ii) If you dont have much knowledge of sugar and just wish to port your web application to the sugar environment then make your .xo by giving the command : .././cordova build sugar ( nor arguments)
+                
+                (iii) A note to windows user :  install 7zip and set the environment variable ZIPCOMMAND with the command
+set ZIPCOMMAND="c:\Program Files\7-Zip\7z.exe" a -r -tzip -aoa
+                     and to build the project - the command goes like -  ..\cordova build sugar or ..\cordova build sugar --noiframe
+
+        4) To add plugins to your project - copy the plugin you wish to add from the plugin folder of this repository, and paste in your project directory's plugin folder, follow the plugin documentation at the apache cordova's website or you can see the sample applications for sugar using that plugin.
+
+        5) To install your xo in sugar environment - copy your xo into the sugar environment and issue the command - sugar-install-bundle <prjoect name>.xo

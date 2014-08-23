@@ -1,0 +1,18 @@
+Synopsis
+
+    cordova-cli run [--debug|--release] [--device|--emulator|--target=FOO] [PLATFORM] [-- [platformopts]]
+
+Deploys app on specified platform devices / emulators
+
+    --debug ............................ Deploy a debug build
+    --release .......................... Deploy a release build
+
+    --device ........................... Deploy to a device
+    --emulator ......................... Deploy to an emulator
+    --target ........................... Deploy to a specific target
+
+To provide platform specific options, you must include them after `--`.
+
+Experimental Flag
+
+    --browserify ....................... Plugins javascript gets loaded at build time instead of runtime using browserify. Replaces cordovajs file with one that includes the JS of the installed plugins.
