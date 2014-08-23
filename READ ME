@@ -21,3 +21,5 @@ set ZIPCOMMAND="c:\Program Files\7-Zip\7z.exe" a -r -tzip -aoa
         4) To add plugins to your project - copy the plugin you wish to add from the plugin folder of this repository, and paste in your project directory's plugin folder, follow the plugin documentation at the apache cordova's website or you can see the sample applications for sugar using that plugin.
 
         5) To install your xo in sugar environment - copy your xo into the sugar environment and issue the command - sugar-install-bundle <prjoect name>.xo
+
+5. Kindly note to make changes in your sugar build environment as mentioned in "changes in sugar build" folder else plugins would not work
