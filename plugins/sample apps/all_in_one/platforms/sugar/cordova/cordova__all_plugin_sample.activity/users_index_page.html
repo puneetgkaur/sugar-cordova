@@ -25,7 +25,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
+        <title>ALL PLUGINS</title>
+        <!--
         <script>
                 //ACCELEROMETER - TEST 1 
 	        // onSuccess: Get a snapshot of the current acceleration
@@ -159,8 +160,33 @@
 
 
         </script>
+        -->
+	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
+	      href="lib/sugar-web/graphics/css/sugar-96dpi.css">
+	<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
+	      href="lib/sugar-web/graphics/css/sugar-200dpi.css">
+	<link rel="stylesheet" href="css/activity.css">
+	<script data-main="js/loader" src="lib/require.js"></script>
     </head>
     <body>
+
+	<div id="main-toolbar" class="toolbar">
+	  <button class="toolbutton" id="activity-button" title="My Activity"></button>
+
+          <a href="accelerometer_plugin.html"><button class="toolbutton" id="accelerometer_plugin" title="Accelerometer Plugin"></button></a>
+          <a href="camera_plugin.html"><button class="toolbutton" id="camera_plugin" title="Camera Plugin"></button>
+          <a href="dialog_plugin.html"><button class="toolbutton" id="dialog_plugin" title="Dialog Plugin"></button>
+          <a href="device_plugin.html"><button class="toolbutton" id="device_plugin" title="Device Plugin"></button>
+          <a href="network_plugin.html"><button class="toolbutton" id="network_plugin" title="Network  Plugin"></button>
+          <a href="globalization_plugin.html"><button class="toolbutton" id="globalization_plugin" title="Globalization Plugin"></button>
+
+	  <!-- Add more buttons here -->
+
+	  <!-- Buttons with class="pull-right" will be right aligned -->
+	  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+	</div>
+
+    <div id="canvas">
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
@@ -168,6 +194,7 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+        <!--
         <h1>ACCELEROMETER</h1><br><br>
         <button onclick="navigator.accelerometer.getCurrentAcceleration(onSuccess_accelerometer1, onError_accelerometer1);">Accelerometer - Test 1 </button> navigator.accelerometer.getCurrentAcceleration - Get the current acceleration along the _x_, _y_, and _z_ axes.
 
@@ -236,7 +263,9 @@ the `accelerometerSuccess` callback function each time.
         <br><br>
 
         <hr>
-          
+       -->   
+
+   </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
