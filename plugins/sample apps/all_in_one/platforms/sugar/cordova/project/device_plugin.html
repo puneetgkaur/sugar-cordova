@@ -29,16 +29,20 @@
         
         <script>
 
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-                //DEVICE PLUGIN
-		function device_plugin() {
-		    var element = document.getElementById('deviceProperties');
-		    element.innerHTML = 'Device Model: '    + device.model    + '\n' +
-					'Device Cordova: '  + device.cordova  + '\n' +
-					'Device Platform: ' + device.platform + '\n' +
-					'Device UUID: '     + device.uuid     + '\n' +
-					'Device Version: '  + device.version  + '\n';
-		}
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Model: '    + device.model    + '\n' +
+                            'Device Cordova: '  + device.cordova  + '\n' +
+                            'Device Platform: ' + device.platform + '\n' +
+                            'Device UUID: '     + device.uuid     + '\n' +
+                            'Device Version: '  + device.version  + '\n';
+    }
 
         </script>
         
@@ -52,7 +56,7 @@
     <body>
 
 	<div id="main-toolbar" class="toolbar">
-	  <button class="toolbutton" id="activity-button" title="My Activity"></button>
+	  <a href="index.html"><button class="toolbutton" id="activity-button" title="My Activity"></button></a>
 
           <a href="accelerometer_plugin.html"><button class="toolbutton" id="accelerometer_plugin" title="Accelerometer Plugin"></button></a>
           <a href="camera_plugin.html"><button class="toolbutton" id="camera_plugin" title="Camera Plugin"></button>
@@ -70,8 +74,14 @@
     <div id="canvas">
           <h1>DEVICE</h1><br><br>
 
-  <p id="deviceProperties">Loading device properties...</p>
+  <p id="deviceProperties">Loading device properties...</p><br>
 
+  It defines a global object device with the following properties :
+  <br>device.model : Get the hardware model from the gio ssettings
+  <br>  device.cordova: the version of cordova
+  <br>  device.platform: returns 'sugar'
+  <br>  device.uuid:returns the serial number
+  <br>  device.version:version of sugar
         <br><br>
 
    </div>
