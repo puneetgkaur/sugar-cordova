@@ -1,6 +1,0 @@
-[Activity]
-name = HelloCordova
-activity_version = 1
-bundle_id = io.cordova.hellocordova
-exec = sugar-activity-web
-icon = activity-icon
