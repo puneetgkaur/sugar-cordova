@@ -34,6 +34,13 @@ from jarabe.journal.objectchooser import ObjectChooser
 
 import logging
 
+from jarabe.cordova import device as cordova_device
+from jarabe.cordova import accelerometer as cordova_accelerometer
+from jarabe.cordova import camera as cordova_camera
+from jarabe.cordova import network as cordova_network
+from jarabe.cordova import dialog as cordova_dialog
+from jarabe.cordova import language as cordova_language
+
 from jarabe.cordova import cordovaSocket
 
 class StreamMonitor(object):
