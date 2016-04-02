@@ -83,3 +83,6 @@ To install your xo in sugar environment :
   3. Go to the sugar shell and issue the command - sugar-install-bundle <name of the cordova project>.xo
 
   4. You are through ! Run the sugar shell and open the activity ! - If you havent changed the icon , it would probably be that of cordova - so watch out :-)
+
+
+Please make changes on sugar side to enable successful run of cordova plugins. This will cater to the backend of the API calls which are generated from the web app. Please look into - https://github.com/puneetgkaur/sugar-cordova/tree/master/changes%20in%20sugar%20build 
