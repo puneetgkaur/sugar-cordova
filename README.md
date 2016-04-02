@@ -47,13 +47,13 @@
 
 this creates a cordova project in current dir\"project directory" as you specify above. The project id and name of the project - that is the name of the sugar activity is set using the project name variable.
 
-## Add ths sugar platform to your project
+## Add the sugar platform to your project
 
     cordova platform add sugar
 
 After this, develop your sugar activity by modifying the project dir\www folder - place where the web app lies. Once the modification is through, build the project by following commands.
 
-## building the project
+## Building the project
 
 ### Normal build with no extra toolbox buttons
 When you dont want to add any extra tool button then use the default option and issue the following command :
