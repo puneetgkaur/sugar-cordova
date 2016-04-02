@@ -1,34 +1,73 @@
 #Cordova Container for Sugar
 
-## Updating Sugar to contain cordova container
 
-1. Add the folder named cordova from "changes in sugar build" folder to the jarabe folder in sugar
 
-2. There is a little change in apisocket.py , need to add a function named cordova in the Activity Class and import the CordovaSocket.py file from jarabe.cordova
+# Instruction to setup the development environment
 
-## Setup the environment for sugar cordova
+1. install npm
 
-1. Install Node.js and npm
-2. git clone this repository in a directory
-3. cd to cordova-cli folder of this repository and issue the command npm link inside the folder
-4. To create a new project : issue the command - cordova create <name of the project directory> <project id> <project name> 
-5. To add the sugar platform to your project :
-   1. Copy the 'sugar' directory from this repo into :
-	    a) Linux or mac users : in ~/.cordova/lib
-            b) Windows - C:\<User name>\.cordova 
+2. Git clone 3 repos : https://github.com/puneetgkaur/cordova-cli, https://github.com/puneetgkaur/cordova-lib, https://github.com/puneetgkaur/cordova-plugman into a directory
 
-   2. Issue the command : cordova platform add sugar inside the project directory created above
+3. Run the following commands:
 
-6. Build your web app - make changes in www or copy your cross platform cordova app in www folder of the project directory you created in step 3
+        cd cordova-plugman
+    
+        npm install
+    
+        sudo npm link
+    
+        cd ..
+    
+        cd cordova-lib
+    
+        npm install
+    
+        sudo npm link
+    
+        cd ..
+    
+        cd cordova-cli
+    
+        npm install
+    
+        sudo npm link
+    
+        npm link ../cordova-lib/cordova-lib cordova-lib
+    
+        npm link ../cordova-plugman/ plugman
 
-7. Make Native Sugar application from your web app :
-                    
-   1. If you dont have much knowledge of sugar and just wish to port your web application to the sugar environment then make your .xo by giving the command : cordova build sugar ( no arguments) inside your cordova project directory
 
-   2. If you know about the sugar environment and would like to make use of sugar web to make your activity then build the project with the command : cordova build sugar --noiframe inside your cordova project directory
 
-   3. A note to windows user :  install 7zip and set the environment variable ZIPCOMMAND with the command
-set ZIPCOMMAND="c:\Program Files\7-Zip\7z.exe" a -r -tzip -aoa before giving the build command
+# commands used to develop a sugar app using cordova
+
+## creating a project
+
+    cordova create "project directory" "project id" "project name"
+
+
+this creates a cordova project in current dir\"project directory" as you specify above. The project id and name of the project - that is the name of the sugar activity is set using the project name variable.
+
+## Add ths sugar platform to your project
+
+    cordova platform add sugar
+
+After this, develop your sugar activity by modifying the project dir\www folder - place where the web app lies. Once the modification is through, build the project by following commands.
+
+## building the project
+
+### Normal build with no extra toolbox buttons
+When you dont want to add any extra tool button then use the default option and issue the following command :
+
+    cordova build sugar
+
+### Adding extra toolbutton
+
+If you have added extra toolbutton then compile your app using the following command :
+
+    cordova build sugar -- noiframe
+
+
+Once you are succesfully build the project, you would find the .xo kept in project dir\platforms\sugar\cordova directory which you can copy and paste into sugar-build folder and run the command sugar-install-bundle "project name".xo
 
 ## Adding Plugins to your project
 
