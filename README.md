@@ -45,18 +45,14 @@
     cordova create "project directory" "project id" "project name"
 
 
-this creates a cordova project in current dir\"project directory" as you specify above. The project id and name of the project - that is the name of the sugar activity is set using the project name variable.
-
 ## Add the sugar platform to your project
 
     cordova platform add sugar
 
-After this, develop your sugar activity by modifying the project dir\www folder - place where the web app lies. Once the modification is through, build the project by following commands.
 
 ## Building the project
 
 ### Normal build with no extra toolbox buttons
-When you dont want to add any extra tool button then use the default option and issue the following command :
 
     cordova build sugar
 
@@ -65,9 +61,6 @@ When you dont want to add any extra tool button then use the default option and 
 If you have added extra toolbutton then compile your app using the following command :
 
     cordova build sugar -- noiframe
-
-
-Once you are succesfully build the project, you would find the .xo kept in project dir\platforms\sugar\cordova directory which you can copy and paste into sugar-build folder and run the command sugar-install-bundle "project name".xo
 
 ## Adding Plugins to your project
 
@@ -82,7 +75,7 @@ To install your xo in sugar environment :
 
   3. Go to the sugar shell and issue the command - sugar-install-bundle <name of the cordova project>.xo
 
-  4. You are through ! Run the sugar shell and open the activity ! - If you havent changed the icon , it would probably be that of cordova - so watch out :-)
+  4. You are through ! Run the sugar shell and open the activity ! - If you havent changed the icon, it shows cordova icon by default as activity icon.
 
 
 Please make changes on sugar side to enable successful run of cordova plugins. This will cater to the backend of the API calls which are generated from the web app. Please look into - https://github.com/puneetgkaur/sugar-cordova/tree/master/changes%20in%20sugar%20build 
